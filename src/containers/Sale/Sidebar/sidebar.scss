@@ -1,0 +1,149 @@
+@import "../../../styles/commonStyle/variables.scss";
+
+.side_bar {
+    background-color: $black;
+    width: 17%;
+    padding: 3rem 2rem;
+    height: 100vh;
+    position: fixed;
+    // min-height: 100vh;
+    z-index: 10;
+
+    .logo_blk {
+        width: 15rem;
+        // height: 15rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // justify-content: space-between;
+        // min-height: 85vh;
+        // height: auto;
+        width: 100%;
+
+        ul {
+            width: 100%;
+            // margin-bottom: 100%;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 3rem;
+                border: 0.1rem solid transparent;
+                // padding: 1.5rem 2.5rem;
+
+
+                &.active {
+                    // border-color: $primary_color;
+                    // width: 70%;
+
+                    a {
+                        color: $primary_color;
+                    }
+
+                    i {
+                        color: $primary_color;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: $primary_color;
+                    }
+
+                    i {
+                        color: $primary_color;
+                    }
+
+                    // border-color: $primary_color;
+                    // width: 70%;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                i {
+                    font-size: 1.8rem;
+                    color: $white;
+                    margin-right: 1rem;
+                    width: 2rem;
+                    height: 2rem;
+                    object-fit: contain;
+                }
+
+                a {
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                    font-weight: 500;
+                    color: $white;
+
+                    @media screen and (max-width: 1360px) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .side-button-placement {
+        
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 17%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        .sign_out {
+            width: 100%;
+            height: 5rem;
+            background-color: $primary_color;
+            color: $white;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: transparent;
+            // margin-top: 2rem;
+            border-radius: 0.8rem;
+            margin-bottom: auto;
+
+            &:hover {
+                border-color: $white;
+            }
+        }
+    }
+}
+
+.progress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.5rem !important;
+    overflow: hidden;
+    font-size: 1.5rem !important;
+    background-color: $white !important;
+    border-radius: 1rem !important;
+}
+
+.progress_text {
+    color: $primary_color;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    background-color: $secondary_color !important;
+}
