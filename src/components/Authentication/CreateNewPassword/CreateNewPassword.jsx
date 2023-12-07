@@ -10,6 +10,7 @@ const CreateNewPassword = () => {
     password: "",
     confirmPassword: "",
   });
+
   const naviagte = useNavigate();
 
   const [errors, setErrors] = useState("");
@@ -42,10 +43,11 @@ const CreateNewPassword = () => {
     } else {
       setErrors("");
       const payload = {
-        password: values.password,
+        newPassword: values.password,
       };
-      naviagte(routes?.auth?.login);
+
       console.log({ payload });
+      naviagte(routes?.auth?.login);
     }
   };
 
@@ -70,9 +72,9 @@ const CreateNewPassword = () => {
           />
 
           {errors && <p className="error">{errors}</p>}
-          <div style={{marginTop:"3rem"}}>
+          <div style={{ marginTop: "3rem" }}>
             <Button id="primary-button" onClick={handleCreateNewPassword}>
-            Confirm
+              Confirm
             </Button>
           </div>
         </div>
